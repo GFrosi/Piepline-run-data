@@ -1,0 +1,5 @@
+2021-08-04 21:52:53	4.8s	nasty_volta	ERR	2a66f8baa691e12d3324dbab7d22fbfb	38d86333-29d5-4b05-8c89-1de4f69968de	nextflow run IHEC_STD.nf
+2021-08-04 21:53:45	9.7s	marvelous_shockley	OK	2a66f8baa691e12d3324dbab7d22fbfb	d8106169-83e0-4bae-a5d8-7682c9734fa3	nextflow run IHEC_STD.nf
+2021-08-04 21:56:40	9.4s	irreverent_austin	OK	2a66f8baa691e12d3324dbab7d22fbfb	6cf1598e-0443-4583-8011-aaae4d39dd06	nextflow run IHEC_STD.nf
+2021-08-04 22:00:15	18.8s	evil_carson	OK	f8d7bcdf59903e30b521fc3f54d53113	dc09619b-5349-44f0-8479-f595c84eedbe	nextflow run IHEC_STD.nf
+2021-09-03 16:27:11	-	tiny_magritte	-	661cedbcbd0e22c56aab70f4c8231174	9325625e-1fb7-45f1-954b-ca1865505b43	nextflow run /home/frosig/nextflow/geo_std/IHEC_STD.nf -c /home/frosig/nextflow/geo_std/nextflow.config

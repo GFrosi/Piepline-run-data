@@ -1,0 +1,39 @@
+Aug-04 22:00:13.980 [main] DEBUG nextflow.cli.Launcher - $> nextflow run IHEC_STD.nf
+Aug-04 22:00:14.245 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.04.1
+Aug-04 22:00:14.268 [main] INFO  nextflow.cli.CmdRun - Launching `IHEC_STD.nf` [evil_carson] - revision: f8d7bcdf59
+Aug-04 22:00:14.327 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/frosig/nextflow/geo_std/nextflow.config
+Aug-04 22:00:14.329 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/frosig/nextflow/geo_std/nextflow.config
+Aug-04 22:00:14.384 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-04 22:00:15.343 [main] DEBUG nextflow.Session - Session uuid: dc09619b-5349-44f0-8479-f595c84eedbe
+Aug-04 22:00:15.343 [main] DEBUG nextflow.Session - Run name: evil_carson
+Aug-04 22:00:15.345 [main] DEBUG nextflow.Session - Executor pool size: 24
+Aug-04 22:00:15.371 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.04.1 build 5335
+  Created: 03-05-2020 19:37 UTC (15:37 EDT)
+  System: Linux 3.10.0-1160.36.2.el7.x86_64
+  Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_192-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 12981@ip15 [10.0.120.115]
+  CPUs: 24 - Mem: 31.3 GB (23.3 GB) - Swap: 32 GB (32 GB)
+Aug-04 22:00:15.560 [main] DEBUG nextflow.Session - Work-dir: /home/frosig/nextflow/geo_std/work [lustre]
+Aug-04 22:00:15.561 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/frosig/nextflow/geo_std/bin
+Aug-04 22:00:15.651 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-04 22:00:15.655 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-04 22:00:18.114 [main] DEBUG nextflow.Session - Session start invoked
+Aug-04 22:00:18.343 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-04 22:00:18.379 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: echoMessage
+Aug-04 22:00:18.479 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Aug-04 22:00:18.479 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Aug-04 22:00:18.495 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Aug-04 22:00:18.506 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Aug-04 22:00:18.514 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Aug-04 22:00:18.694 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-04 22:00:18.694 [main] DEBUG nextflow.Session - Session await
+Aug-04 22:00:19.230 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process echoMessage > jobId: 6940048; workDir: /home/frosig/nextflow/geo_std/work/01/c6a15df67ea89ece9c096de093b85e
+Aug-04 22:00:19.237 [Task submitter] INFO  nextflow.Session - [01/c6a15d] Submitted process > echoMessage
+Aug-04 22:00:33.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 6940048; id: 1; name: echoMessage; status: COMPLETED; exit: 0; error: -; workDir: /home/frosig/nextflow/geo_std/work/01/c6a15df67ea89ece9c096de093b85e started: 1628128823539; exited: 2021-08-05T02:00:32Z; ]
+Aug-04 22:00:33.611 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-04 22:00:33.615 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-04 22:00:33.636 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=10s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=5 GB; ]
+Aug-04 22:00:33.803 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-04 22:00:33.822 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,39 @@
+Aug-04 21:56:38.652 [main] DEBUG nextflow.cli.Launcher - $> nextflow run IHEC_STD.nf
+Aug-04 21:56:38.916 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.04.1
+Aug-04 21:56:38.937 [main] INFO  nextflow.cli.CmdRun - Launching `IHEC_STD.nf` [irreverent_austin] - revision: 2a66f8baa6
+Aug-04 21:56:38.978 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/frosig/nextflow/geo_std/nextflow.config
+Aug-04 21:56:38.980 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/frosig/nextflow/geo_std/nextflow.config
+Aug-04 21:56:39.025 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-04 21:56:39.977 [main] DEBUG nextflow.Session - Session uuid: 6cf1598e-0443-4583-8011-aaae4d39dd06
+Aug-04 21:56:39.978 [main] DEBUG nextflow.Session - Run name: irreverent_austin
+Aug-04 21:56:39.979 [main] DEBUG nextflow.Session - Executor pool size: 24
+Aug-04 21:56:40.005 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.04.1 build 5335
+  Created: 03-05-2020 19:37 UTC (15:37 EDT)
+  System: Linux 3.10.0-1160.36.2.el7.x86_64
+  Runtime: Groovy 2.5.8 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_192-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 8858@ip15 [10.0.120.115]
+  CPUs: 24 - Mem: 31.3 GB (23.3 GB) - Swap: 32 GB (32 GB)
+Aug-04 21:56:40.198 [main] DEBUG nextflow.Session - Work-dir: /home/frosig/nextflow/geo_std/work [lustre]
+Aug-04 21:56:40.199 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/frosig/nextflow/geo_std/bin
+Aug-04 21:56:40.296 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Aug-04 21:56:40.299 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-04 21:56:43.734 [main] DEBUG nextflow.Session - Session start invoked
+Aug-04 21:56:43.963 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-04 21:56:44.012 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: echoMessage
+Aug-04 21:56:44.107 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Aug-04 21:56:44.108 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Aug-04 21:56:44.125 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Aug-04 21:56:44.137 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Aug-04 21:56:44.144 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Aug-04 21:56:44.330 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-04 21:56:44.330 [main] DEBUG nextflow.Session - Session await
+Aug-04 21:56:44.845 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process echoMessage > jobId: 6940042; workDir: /home/frosig/nextflow/geo_std/work/d4/fb2318962ba51e9450dbf96bf919b3
+Aug-04 21:56:44.852 [Task submitter] INFO  nextflow.Session - [d4/fb2318] Submitted process > echoMessage
+Aug-04 21:56:49.169 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 6940042; id: 1; name: echoMessage; status: COMPLETED; exit: 0; error: -; workDir: /home/frosig/nextflow/geo_std/work/d4/fb2318962ba51e9450dbf96bf919b3 started: 1628128609157; exited: 2021-08-05T01:56:49Z; ]
+Aug-04 21:56:49.200 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-04 21:56:49.201 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-04 21:56:49.218 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=12ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=5 GB; ]
+Aug-04 21:56:49.401 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-04 21:56:49.419 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -25,15 +25,15 @@ def data_parse(file_n):
         line = line.strip()
         splited_table = line.split('\t')[1:] #removing index column; file separated by TAB
         splited_table[-2] = splited_table[-2].replace('"', '') #replacing "" by nothing; Corresponding Control column
-        splited_table[-4] = splited_table[-4].replace('"', '') #SRR column
+        splited_table[19] = splited_table[19].replace('"', '') #SRR column
 
         if splited_table[-2] != 'NA': #removing inputs
-            srr_ip = splited_table[-4].split(',')[0] #getting just the first SRR (in this case, the first technical replicate to filter json)
+            srr_ip = splited_table[19].split(',')[0] #getting just the first SRR (in this case, the first technical replicate to filter json)
             gsm_ctrl = splited_table[-2].split(',')
             dict_srr_IP[srr_ip] = gsm_ctrl
 
         else:
-            srr_ctl = splited_table[-4].split(',')[0]
+            srr_ctl = splited_table[19].split(',')[0]
             dict_gsm_srr_ctrl[splited_table[7]] = srr_ctl #getting each GSM cctrl from GSM column (individualy)
 
             
@@ -82,7 +82,9 @@ def create_json_struc(final_dict, list_json_stand, dict_ip_srr, list_ctrl_srr):
     ctrl_str_r2 = 'chip.ctl_fastqs_rep1_R2' #stand the key name for the json file (all rep 1)
 
     for k,v in dict_ip_srr.items():
-        ctrl_dict_rep = {'R1': [], 'R2': [] }
+        # ctrl_dict_rep = {'R1': [], 'R2': [] }
+        ctrl_dict_rep = {'R1': '', 'R2': '' }
+
         partial_list = list_json_stand.copy()
         for tup in v:
             tup = list(tup) #  convert to list to modify rep2, rep3 into rep1
@@ -101,9 +103,13 @@ def create_json_struc(final_dict, list_json_stand, dict_ip_srr, list_ctrl_srr):
             for ctrl_path in ctrl[1]:
                 if  os.path.basename(ctrl_path).split('_')[0] in srr_ctl:
                     if 'R1' in ctrl[0]:
-                        ctrl_dict_rep['R1'].append(ctrl_path)
+                        # ctrl_dict_rep['R1'].append(ctrl_path)
+                        ctrl_dict_rep['R1'] = ctrl[1]
+
                     else: 
-                        ctrl_dict_rep['R2'].append(ctrl_path)
+                        # ctrl_dict_rep['R2'].append(ctrl_path)
+                        ctrl_dict_rep['R2'] = ctrl[1]
+
    
         r1_tup  = (ctrl_str_r1, ctrl_dict_rep['R1'])
         partial_list.append(r1_tup)
@@ -182,7 +188,6 @@ def write_json(general_list, root_dir, json_full):
                 ctrl_paired = 1
         
         
-        
         to_write += '}'
         to_write = to_write.replace(',\n}','\n}')
         if ip_paired == 1:
@@ -214,8 +219,6 @@ def std_json_line(tup):
       
     return to_write
     
-
-
 
 def generate_input_json(json_file):
 

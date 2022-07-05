@@ -61,7 +61,7 @@ optional arguments:
   ```
 
 
-## Submission IHEC pipeline using Nextflo
+## Submission IHEC pipeline using Nextflow
 
 - 1. Things to adjust before run the Nextflow pipeline:
      -    1.1 Move all .gz files to data_srr dir and create a list of GSEs (gse_list.txt)
